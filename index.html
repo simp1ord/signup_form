@@ -34,30 +34,39 @@
           You WANT to Join US!
         </p>
       </div>
-      <div class="mainForm">
-        <fieldset>
+      <form method= "get" id="mainForm">
+        <fieldset class = 'dataInputs'>
           <legend>Fill Out Your Information Below</legend>
-          
-          <label for="firstName">First Name</label>
-          <input type="text" name="userFirstName" id="firstName">
-  
-          <label for="lastName">Last Name</label>
-          <input type="text" name="userLastName" id="lastName">
-  
-          <label for="email">E-Mail</label>
-          <input type="email" name="userEmail" id="email">
-  
-          <label for="phoneNumber">Phone Number</label>
-          <input type="number" name="userNumber" id="phoneNumber">
-  
-          <label for="password">Password</label>
-          <input type="password" name="userPassword" id="password">
-  
-          <label for="confirmPassword">Confirm Password</label>
-          <input type="password" name="userConfirmPassword" id="confirmPassword">
+          <div class="labelAndInput">
+            <label for="firstName">First Name</label>
+            <input type="text" name="userFirstName" id="firstName" placeholder="John" required>
+          </div>
+          <div class="labelAndInput">
+            <label for="lastName">Last Name</label>
+            <input type="text" name="userLastName" id="lastName" placeholder="Doe" required>
+          </div>
+          <div class="labelAndInput">
+            <label for="email">E-Mail</label>
+            <input type="email" name="userEmail" id="email" placeholder="coolguy1@gmail.com" required>
+          </div>
+
+          <div class="labelAndInput">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="number" name="userNumber" id="phoneNumber" placeholder="(333)-111-2222" required minlength="9" pattern="[789][0-9]{9}">
+          </div>
+          <div class="labelAndInput third left">
+            <label for="password">Password</label>
+            <input type="password" name="userPassword" id="password" required minlength="4">
+          </div>
+          <div class="labelAndInput third right">
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="password" name="userConfirmPassword" id="confirmPassword" required minlength="4">
+          </div>
         </fieldset>
-        <button class="signupButton">Sign-Up!</button>
-        <div class="loginPrompt">If you already have an account, <span>login.</span></div>
+      </form>
+      <div class="signupAndLogin">
+        <button class="signupButton" type="submit" value="submit" form="mainForm">Sign-Up!</button>
+        <div class="loginPrompt">If you already have an account, <span><a href="index.html">Login.</a></span></div>
       </div>
     </div>
   </div>
